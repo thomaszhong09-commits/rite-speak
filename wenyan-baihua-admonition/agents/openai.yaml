@@ -1,7 +1,0 @@
-interface:
-  display_name: "文言白话劝谏体"
-  short_description: "将现代诉求写成故事开路圣贤收束的搞怪劝谏文本"
-  default_prompt: "Use $wenyan-baihua-admonition to先拆解真实主题，再写成我曾听说开头、故事比喻铺陈、排比反问加压、圣贤道理收束的白话劝谏文本。"
-
-policy:
-  allow_implicit_invocation: true

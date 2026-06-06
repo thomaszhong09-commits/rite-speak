@@ -1,0 +1,7 @@
+interface:
+  display_name: "RiteSpeak / 合乎周礼"
+  short_description: "把现代诉求写成合乎周礼的搞怪劝谏文本"
+  default_prompt: "Use $rite-speak to先拆解真实主题，再写成我曾听说开头、故事比喻铺陈、排比反问加压、圣贤道理收束的合乎周礼式白话劝谏文本。"
+
+policy:
+  allow_implicit_invocation: true

@@ -1,8 +1,10 @@
-# 文言白话劝谏体
+# RiteSpeak / 合乎周礼
 
-把现代人的小情绪、小请求、小安慰，写成一本正经的古雅劝谏。
+Modern requests, rewritten as ceremonially proper Chinese admonitions.
 
-这是一个 Codex skill，用来生成一种“骨架文言、血肉白话”的中文表达：开头讲古，途中排比，末尾搬出贤德、君子、圣人之道，最后才落回现实小事。效果不是严肃复古，而是庄重又好笑的小题大做。
+**合乎周礼** 是一个 Codex skill，用来把现代人的小情绪、小请求、小安慰，写成一本正经的古雅劝谏。
+
+它生成的是一种“骨架文言、血肉白话”的中文表达：开头讲古，途中排比，末尾搬出贤德、君子、圣人之道，最后才落回现实小事。效果不是严肃复古，而是庄重又好笑的小题大做。
 
 ## 它能写什么
 
@@ -19,25 +21,27 @@
 
 它不是纯文言文，也不是普通改写，而是故意把一件日常小事抬到“贤德”“仁义”“君子之道”的高度，让人一边觉得荒谬，一边又觉得道理确实在那里。
 
+In short: **RiteSpeak turns everyday requests into solemn, story-driven Chinese admonitions.**
+
 ## 使用方式
 
-把 `wenyan-baihua-admonition/` 放进 Codex 的 skills 目录后，可以这样调用：
+把 `rite-speak/` 放进 Codex 的 skills 目录后，可以这样调用：
 
 ```text
-Use $wenyan-baihua-admonition to 把这段话写成文言白话劝谏体：我想劝朋友早点睡，不要一直熬夜。
+Use $rite-speak to 把这段话写成合乎周礼的文言白话劝谏体：我想劝朋友早点睡，不要一直熬夜。
 ```
 
 也可以直接说：
 
 ```text
-用 $wenyan-baihua-admonition，先拆解我的真实诉求，再写成文言白话劝谏体：……
+用 $rite-speak，先拆解我的真实诉求，再写成合乎周礼的劝谏体：……
 ```
 
 安装到本机 Codex skills 目录的一个简单方式：
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -R wenyan-baihua-admonition ~/.codex/skills/
+cp -R rite-speak ~/.codex/skills/
 ```
 
 ## 示例
@@ -67,3 +71,9 @@ cp -R wenyan-baihua-admonition ~/.codex/skills/
 ## 适合传播的一句话
 
 一个把“帮我洗碗”写成“贤能君子之道”的 Codex 中文写作 skill。
+
+English tagline:
+
+```text
+RiteSpeak turns everyday requests into ceremonially proper Chinese admonitions.
+```

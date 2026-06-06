@@ -1,13 +1,13 @@
 ---
-name: wenyan-baihua-admonition
-description: Write or rewrite Chinese requests in a "wenyan-baihua admonition" style: modern spoken Chinese with classical admonition structure, saintly moral framing, folk-historical anecdotes, extended analogy, repetition, parallelism, rhetorical questions, and playful over-serious persuasion. Use when the user asks for 文言白话劝谏体, 现代人用文言文交流, 圣贤腔, 古雅劝谏, 搞怪文言结构, or wants a messy modern intention turned into a solemn but funny admonition text.
+name: rite-speak
+description: Write or rewrite Chinese requests in the "RiteSpeak / 合乎周礼" style: modern spoken Chinese with classical admonition structure, ceremonial propriety, saintly moral framing, folk-historical anecdotes, extended analogy, repetition, parallelism, rhetorical questions, and playful over-serious persuasion. Use when the user asks for 合乎周礼, RiteSpeak, 文言话术, 文言白话劝谏体, 现代人用文言文交流, 圣贤腔, 古雅劝谏, 搞怪文言结构, or wants a messy modern intention turned into a ceremonially proper but funny admonition text.
 ---
 
-# Wenyan Baihua Admonition
+# RiteSpeak / 合乎周礼
 
 ## Core Effect
 
-Produce "骨架文言、血肉白话" Chinese prose. The text should sound like a modern person deliberately borrowing the posture of an ancient loyal minister, historian, or moral teacher to discuss a small modern matter. The humor comes from "小题大做": lifting housework, work fatigue, friendship, sleep, studying, or daily conflict into the realm of 贤德、仁义、君子之道、圣人之训.
+Produce "骨架文言、血肉白话" Chinese prose under the project identity "RiteSpeak / 合乎周礼". The text should sound like a modern person deliberately borrowing the posture of an ancient loyal minister, historian, ritualist, or moral teacher to discuss a small modern matter. The humor comes from "小题大做": lifting housework, work fatigue, friendship, sleep, studying, or daily conflict into the realm of 贤德、仁义、君子之道、圣人之训.
 
 Do not write pure classical Chinese. Keep the language mostly plain Chinese, but arrange it with classical admonition logic: story first, analogy second, moral pressure third, reality last.
 
