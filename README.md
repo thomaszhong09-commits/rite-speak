@@ -2,7 +2,7 @@
 
 Modern requests, rewritten as ceremonially proper Chinese admonitions.
 
-**合乎周礼** 是一个 Codex skill，用来把现代人的小情绪、小请求、小安慰，写成一本正经的古雅劝谏。
+**合乎周礼** 是一套 AI 中文写作风格指令，用来把现代人的小情绪、小请求、小安慰，写成一本正经的古雅劝谏。它可以作为普通提示词复制给各类 AI 使用，也可以作为 Codex skill 安装。
 
 它生成的是一种“骨架文言、血肉白话”的中文表达：开头讲古，途中排比，末尾搬出贤德、君子、圣人之道，最后才落回现实小事。效果不是严肃复古，而是庄重又好笑的小题大做。
 
@@ -23,7 +23,27 @@ Modern requests, rewritten as ceremonially proper Chinese admonitions.
 
 In short: **RiteSpeak turns everyday requests into solemn, story-driven Chinese admonitions.**
 
+## 效果展示
+
+![RiteSpeak 效果展示](assets/ritespeak-preview.png)
+
 ## 使用方式
+
+### 给任意 AI 使用
+
+把下面这段复制给 AI，再接上你的具体诉求即可：
+
+```text
+请使用 RiteSpeak / 合乎周礼 风格改写我的诉求。
+
+这种风格是“骨架文言、血肉白话”：先拆解我的真实意图，再用“我曾听说……”开头，讲一个古代故事、器物道理、动物习性或通俗典故；中间加入排比、重复、反问和圣贤语气；最后回到现实主题。
+
+不要写成纯文言文，要保持白话可读，但结构像古人进谏。整体效果要庄重、搞怪、小题大做，把现代小事抬到“贤德、仁义、君子之道、圣人之训”的高度。
+
+我的诉求是：……
+```
+
+### 作为 Codex skill 使用
 
 把 `rite-speak/` 放进 Codex 的 skills 目录后，可以这样调用：
 
@@ -70,7 +90,7 @@ cp -R rite-speak ~/.codex/skills/
 
 ## 适合传播的一句话
 
-一个把“万事”都写成“贤能君子之道”的合乎周礼式搞怪表达 Codex 中文写作 skill。
+一个把“万事”都写成“贤能君子之道”的合乎周礼式搞怪表达 AI 中文写作指令。
 
 English tagline:
 
