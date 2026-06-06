@@ -70,7 +70,7 @@ cp -R rite-speak ~/.codex/skills/
 
 ## 适合传播的一句话
 
-一个把“帮我洗碗”写成“贤能君子之道”的 Codex 中文写作 skill。
+一个把“万事”都写成“贤能君子之道”的合乎周礼式搞怪表达 Codex 中文写作 skill。
 
 English tagline:
 
