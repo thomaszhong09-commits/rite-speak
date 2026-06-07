@@ -25,8 +25,8 @@ long-form blueprint, required rhetorical devices, and example-level constraints.
      final landing point.
    - For long or chaotic prompts, extract 3-6 "must-integrate points"; ignore
      unrelated old requests or wording caused by the user thinking aloud.
-   - Compress those points into one governing thesis, such as "这不是在夸工作量,
-     而是在夸她在反复返工中仍能守住条理与信心."
+   - Compress those points into one governing thesis, such as "这不是在催人早睡,
+     而是在说明惜养精神也是君子长远之道."
    - If the user asks to see the拆解, show it briefly before the finished text.
      If not, keep this step internal.
 
@@ -78,7 +78,7 @@ long-form blueprint, required rhetorical devices, and example-level constraints.
 8. Handle modern concepts without breaking the tone.
    - Keep unavoidable modern nouns when needed for clarity.
    - First translate them into old-world speech when useful, then clarify:
-     "那件会答话的机巧之器，也就是前面的 AI..."
+     "那件会答话的机巧之器，也就是 AI..."
    - Avoid jargon-heavy modern terms when a plainer phrase works. Prefer "做事",
      "交付", "反复", "费心", "劳神", "乱了分寸", "守住条理".
 
