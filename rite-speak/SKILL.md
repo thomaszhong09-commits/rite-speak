@@ -54,10 +54,18 @@ long-form blueprint, required rhetorical devices, and example-level constraints.
      floating as decoration.
 
 5. Force铺排 before点题.
-   - Include at least one three-part parallel sequence in every output:
-     "它错一处，您便查一处；它漏一段，您便补一段；它乱一次，您便理一次。"
-   - For long form, include two different kinds of铺排: one about ancient imagery
-     and one about the modern situation.
+   - Include at least one developed parallel passage in every output. Do not
+     satisfy this with only a short three-beat action pattern.
+   - Parallelism may use three objects, three allusions, three mini-stories,
+     three emotional states, three scenes, three consequences, or three actions.
+   - For long form, include at least two different kinds of铺排. At least one
+     should be medium or long-clause parallelism where each clause contains a
+     condition plus a result, such as "再坚固的城门，风雨久了也要重油门轴；再锋利
+     的宝剑，斩伐多了也要回炉淬火；再善走的车马，远行久了也要卸轭喂草。"
+   - Treat "它错一处，您便查一处；它漏一段，您便补一段；它乱一次，您便理一次。"
+     as a narrow micro-pattern only, not the default answer.
+   - For long form, prefer one铺排 about ancient imagery or stories and one铺排
+     about the modern situation.
    - Prefer repeated oral rhythm over elegant isolated sentences. This style is
      not "文雅第一"; it is "铺排、反转、拐弯说理第一".
 
@@ -96,7 +104,8 @@ Before finalizing, verify:
 - The opening does not directly state the real issue.
 - At least one story or allusion is developed enough to feel like "讲古".
 - At least one "比不上...但是..." or equivalent suppression/reversal appears.
-- At least one three-part铺排 appears; long form needs at least two.
+- At least one developed铺排 appears; long form needs at least two different
+  types, and one should use medium or long clauses.
 - Confucian/ritual vocabulary appears as reasoning, not just as decoration.
 - The analogy maps to the real situation instead of merely sounding elegant.
 - There is clear repetition, parallelism, or double-negative rhythm.

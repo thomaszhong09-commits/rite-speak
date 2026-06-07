@@ -78,8 +78,10 @@ For a serious RiteSpeak output, include:
 
 - One distant story or analogy, developed for more than one sentence.
 - One "比不上...比不上...但是..." or equivalent reversal.
-- One three-part parallelism about old-world imagery.
-- One three-part parallelism about the real modern situation.
+- One developed parallel passage about old-world imagery, stories, or allusions.
+- One developed parallel passage about the real modern situation.
+- At least one parallel passage in long form should use medium or long clauses,
+  not only short beats.
 - One rhetorical question: "器物尚且如此，何况是人呢？" or similar.
 - One allusion or story explanation: "这不是在说X，而是在说Y."
 - One explicit virtue: 贤、德、仁、义、礼、君子、圣人, etc.
@@ -157,17 +159,52 @@ Useful sentence shapes:
 
 Use these as flexible patterns, not templates to copy exactly.
 
+Parallelism is a broad铺排 method, not a single short sentence shape. It can
+line up objects, allusions, stories, scenes, emotional states, consequences,
+actions, or moral claims. For long-form output, at least one parallel passage
+should use medium or long clauses where each clause contains a situation plus
+an action/result. Avoid treating "它错一处，您便查一处" as the default answer.
+
 ### Suppression/reversal
 
 "论[能力一]，它比不上[强物一]；论[能力二]，它比不上[强物二]；论[能力三]，它更远不如[强物三]。可是当[关键处境]来的时候，[弱物/小物]偏偏能[真实本事]。为什么？就因为[德性/道理]."
 
-### Rework铺排
+### Object铺排
+
+"再坚固的城门，风雨久了也要重油门轴；再锋利的宝剑，斩伐多了也要回炉淬火；再善走的车马，远行久了也要卸轭喂草。"
+
+"漏刻里的水少了，要添水才不误时辰；圭表上的刻度暗了，要擦净才见分明；日晷上的针影偏了，要校正才知早晚。"
+
+### Allusion铺排
+
+"苏秦刺股，不是叫人夜夜不眠；勾践尝胆，不是叫人只会受苦；张良拾履，也不是叫人逢事低头，而是说人要知道何时自励、何时忍耐、何时守约。"
+
+"华元因一碗羊汤失了车夫之心，胡亥因不听近臣而众叛亲离，英布因轻慢旧部而孤立无援，这些都不是在说小事能立刻毁人，而是在说礼义一松，人心便会慢慢散去。"
+
+### Mini-story铺排
+
+"管仓的小吏要重编被雨打湿的竹简，渡河的船夫要调正被逆风推偏的船桨，守门的老卒要清开被泥水堵住的门道，三者说的都不是器物本身，而是临事不乱。"
+
+### State铺排
+
+"心里急的时候不乱言，手上忙的时候不弃事，旁人催的时候不失礼。"
+
+"困倦来时知道止息，烦乱来时知道收心，事情逼近时知道守住条理。"
+
+### Action铺排
 
 "它错一处，您便查一处；它漏一段，您便补一段；它乱一次，您便理一次。"
 
 "该重看的地方重看，该改正的地方改正，该从头来的地方从头来。"
 
 "不因第一遍不成便弃事，不因第二遍生错便灰心，不因第三遍返工便怨天。"
+
+Use these short action patterns sparingly. They are useful near the reality
+mapping, but they should not be the only parallelism in a long output.
+
+### Moral progression铺排
+
+"这不是惜一时的安逸，而是惜长久的精神；不是避眼前的小劳，而是守将来的大事；不是把道理说得沉重，而是不愿让人心在琐碎处先乱。"
 
 ### Moral pressure
 
@@ -219,7 +256,8 @@ Before answering, ask:
 1. Did I first integrate the user's real intention into one thesis?
 2. Is there a distant story before the modern point?
 3. Is there suppression/reversal?
-4. Are there at least two visible铺排 rhythms in long form?
+4. Are there at least two visible铺排 rhythms in long form, with at least one
+   medium or long-clause passage?
 5. Is the Confucian language doing argument work?
 6. Did I explain the story/allusion in plain Chinese?
 7. Does the ending return to the user's actual emotional purpose?
