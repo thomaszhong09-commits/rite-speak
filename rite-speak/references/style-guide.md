@@ -6,18 +6,48 @@ Confucian flavor, analogy, or concentrated argument.
 
 ## Non-Negotiable Effect
 
-The output is not ordinary classical-flavored Chinese. It is a playful
-"loyal-minister admonition" that treats a small modern matter as a question of
-贤德、仁义、礼法、君子之道. The reader should feel: "This person is clearly
-talking about a tiny practical thing, but has invited birds, doors, furnaces,
-old rulers, craftsmen, sages, and historians to testify."
+The output is not ordinary classical-flavored Chinese. By default it is a
+paired output: **白话译文** plus **文言正文**. Both versions must share one
+meaning, one story order, one moral argument, and one final landing point. The
+白话译文 is the readable translation of the 文言正文, not a separate draft.
+
+It is a playful "loyal-minister admonition" that treats a small modern matter
+as a question of 贤德、仁义、礼法、君子之道. The reader should feel: "This
+person is clearly talking about a tiny practical thing, but has invited birds,
+doors, furnaces, old rulers, craftsmen, sages, and historians to testify."
 
 The style must be "骨架文言、血肉白话":
 
-- Mostly readable modern Chinese.
+- 白话译文: mostly readable modern Chinese.
+- 文言正文: classical-style Chinese with 文言 vocabulary, compact syntax, and
+  old-style admonition turns.
 - Ancient-feeling structure and moral posture.
 - Humor from 小题大做, not from jokes.
 - Reasoning by story, analogy, repetition, reversal, and solemn ending.
+
+## Output Modes
+
+Default output:
+
+```text
+**白话译文**
+[Readable modern Chinese with classical admonition structure.]
+
+**文言正文**
+[Classical-style Chinese carrying the same content.]
+```
+
+Single-output exceptions:
+
+- If the user explicitly asks for only 白话, 通俗版, 现代白话, or 文言白话,
+  output only **白话译文**.
+- If the user explicitly asks for only 文言, 纯文言, 古文, 古雅正文, or 文言文,
+  output only **文言正文**.
+
+For paired output, draft one canonical argument first. Then render both
+versions from that argument. Keep paragraph count, images, allusions,
+parallelism, request/praise/warning, and conclusion aligned. Do not add a
+different joke, image, or moral claim to only one version.
 
 ## Long-Form Integration Algorithm
 
@@ -33,6 +63,7 @@ Before drafting, create an internal "文意骨架":
 6. Moral vocabulary: choose 3-5 terms such as 贤、仁、义、礼、德、忠、恕、
    君子、圣人.
 7. Final landing: what should the listener feel or do?
+8. Output mode: paired by default, or single register if explicitly requested.
 
 For long form, do not write separate paragraphs for every user detail. Fuse
 details into one moral argument. Each paragraph should either:
@@ -71,6 +102,10 @@ For 3+ paragraphs, use this shape:
 
 6. Real ending.
    The last line must land on the user's true intention, not the opening story.
+
+For paired output, both versions should follow this same shape. The 文言正文 may
+be shorter and more compact, but it must not skip the story, reversal,
+allusion, moral pressure, or final landing that appear in the 白话译文.
 
 ## Device Quotas
 
@@ -154,6 +189,45 @@ Useful sentence shapes:
 - "君子之贤，不在器物顺手之时才显；正在器物拂逆、人心疲惫之时显。"
 - "所谓仁，并不是说一句好听的话便算完，而是看见旁人劳神，心里能生出体恤。"
 - "所谓忠，并不是把难听的话藏起来，而是不肯让事情在眼前坏下去。"
+
+## Classical Register
+
+Use this section when producing **文言正文**.
+
+The 文言正文 should feel like a compact admonition, memorial, or old-style moral
+note. Use classical turns such as:
+
+- "吾闻..."
+- "昔者..."
+- "夫..."
+- "然..."
+- "今君..."
+- "是故..."
+- "由是观之..."
+- "非...也，乃...也。"
+- "岂...哉？"
+- "可不思乎？"
+
+Classical register rules:
+
+- Compress modern explanation; do not translate every colloquial word literally.
+- Keep the same content as the 白话译文, but use fewer, stronger clauses.
+- Prefer classical words: 君, 吾, 事, 器, 德, 仁, 义, 礼, 贤, 圣人, 是故, 何也.
+- Avoid modern abstractions such as 效率、压力、情绪价值、执行力 unless the user
+  explicitly requires them.
+- For modern objects, use a classical gloss first: AI -> 能言之机 / 机巧之器;
+  phone -> 掌中之屏 / 掌中机; project -> 案牍之事 / 所任之事.
+- Preserve the comic contrast. The 文言正文 should still be about a tiny modern
+  matter raised to ritual-moral seriousness.
+
+Paired-output alignment check:
+
+- Same paragraph count where practical.
+- Same opening image.
+- Same suppression/reversal.
+- Same allusion or story proof.
+- Same modern landing.
+- Same final intention.
 
 ## Parallelism and Reversal Patterns
 
@@ -241,6 +315,8 @@ of preachy."
 
 Possible RiteSpeak output:
 
+**白话译文**
+
 我曾听说，古时候行远路的人，论脚力比不上日行千里的骏马，论方向比不上识途的老仆，论胆气更远不如披甲临阵的将军。可是他们若想平安到达远方，夜里没有不歇脚的，水囊没有不添满的，灯油没有不省着用的。为什么？就因为路再长，也要靠一夜一夜把精神养回来。
 
 如今您说自己还不困，还要再看一会儿、再刷一会儿、再撑一会儿，这话听着豪迈，细想却像拿空灯盏照夜路。烛火再明，油尽了也要发暗；弓弦再劲，绷久了也要松脱；良马再健，跑久了也要喂草。该歇的时候不歇，该养的时候不养，该收灯的时候偏要添火，这难道是长久成事的办法吗？器物尚且如此，何况是人呢？
@@ -249,15 +325,28 @@ Possible RiteSpeak output:
 
 所以我今日所言，并不是要扫您的兴，也不是要夺您的夜间清欢。只是早睡并非怯懦，乃是为明日蓄德；合眼并非偷懒，正是为长久成事。若让一时精神耗尽，明日又拿什么治理天下，至少治理自己的早饭呢？阁下不妨细细思索其中的道理。
 
+**文言正文**
+
+吾闻古之远行者，足力不及千里之马，识途不及老仆，胆气又不及披甲之将。然欲安至远方，则夜无不息，囊无不盈，膏无不惜。何也？路虽长，必以夜夜养其神也。
+
+今君曰未困，且更观、更刷、更撑，此言似豪，细思则如持空盏以照夜。烛虽明，膏尽则暗；弦虽劲，久张则弛；马虽良，久驰则饥。器犹如此，而况人乎？
+
+昔苏秦刺股，所以警惰，非教人彻夜不眠也；张良五更赴约，亦非谓夜半当耗精神也，乃谓当醒则醒，当养则养。圣人所贵者，非夜半强支，乃知进退、识劳养也。
+
+是故吾言，非扫君兴也，非夺夜乐也。早寝非怯，乃蓄明日之德；闭目非惰，乃图久远之成。若一时耗神，明日何以治天下，且何以治己之朝食乎？愿君熟思其理。
+
 ## Final Self-Check
 
 Before answering, ask:
 
 1. Did I first integrate the user's real intention into one thesis?
-2. Is there a distant story before the modern point?
-3. Is there suppression/reversal?
-4. Are there at least two visible铺排 rhythms in long form, with at least one
+2. Did I choose the correct output mode, paired by default unless single-register
+   output was explicitly requested?
+3. If paired, do 白话译文 and 文言正文 carry the same content and order?
+4. Is there a distant story before the modern point?
+5. Is there suppression/reversal?
+6. Are there at least two visible铺排 rhythms in long form, with at least one
    medium or long-clause passage?
-5. Is the Confucian language doing argument work?
-6. Did I explain the story/allusion in plain Chinese?
-7. Does the ending return to the user's actual emotional purpose?
+7. Is the Confucian language doing argument work?
+8. Did I explain the story/allusion in plain Chinese in the 白话译文?
+9. Does the ending return to the user's actual emotional purpose?

@@ -1,7 +1,7 @@
 interface:
   display_name: "RiteSpeak / 合乎周礼"
-  short_description: "把现代万事写成故事开路、铺排反转、圣贤收束的合乎周礼长短文"
-  default_prompt: "Use $rite-speak to先统摄真实观点，再写成我曾听说开头、故事用典举证、比不上/但是反转、排比铺陈加压、儒家贤德收束的合乎周礼文本。"
+  short_description: "把现代万事写成白话译文+文言正文双版合乎周礼劝谏"
+  default_prompt: "Use $rite-speak to先统摄真实观点，默认输出白话译文和文言正文两版；两版内容一致，并用故事用典、比不上/但是反转、展开式铺排、儒家贤德收束。"
 
 policy:
   allow_implicit_invocation: true
