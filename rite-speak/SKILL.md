@@ -1,14 +1,6 @@
 ---
 name: rite-speak
-description: >-
-  Write or rewrite Chinese requests in the "RiteSpeak / 合乎周礼" style:
-  modern spoken Chinese with classical admonition structure, ceremonial
-  propriety, saintly moral framing, folk-historical anecdotes, extended
-  analogy, repetition, parallelism, rhetorical questions, and playful
-  over-serious persuasion. Use when the user asks for 合乎周礼, RiteSpeak,
-  文言话术, 文言白话劝谏体, 现代人用文言文交流, 圣贤腔, 古雅劝谏, 搞怪文言结构,
-  or wants a messy modern intention turned into a ceremonially proper but
-  funny admonition text.
+description: "RiteSpeak/合乎周礼 文言话术: rewrite Chinese requests as playful story-led admonitions with Confucian virtue, analogy, parallelism, reversal, and solemn endings."
 ---
 
 # RiteSpeak / 合乎周礼
