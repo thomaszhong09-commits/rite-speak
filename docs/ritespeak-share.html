@@ -120,7 +120,7 @@
 
       .demo {
         margin-top: 24px;
-        height: 815px;
+        height: 790px;
         border: 1px solid var(--line);
         border-radius: 34px;
         background: rgba(255, 253, 247, 0.89);
@@ -155,47 +155,88 @@
       }
 
       .content {
-        padding: 28px 30px;
+        padding: 26px 30px;
       }
 
-      .prompt {
+      .chat {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .turn {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+
+      .turn.user {
+        justify-content: flex-end;
+      }
+
+      .avatar {
+        width: 54px;
+        height: 54px;
+        flex: 0 0 auto;
         display: grid;
-        grid-template-columns: 108px 1fr;
-        gap: 18px;
-        align-items: start;
-        margin-bottom: 22px;
+        place-items: center;
+        border-radius: 17px;
+        background: var(--ink);
+        color: var(--paper);
+        font-size: 23px;
+        font-weight: 900;
       }
 
-      .label {
-        padding-top: 16px;
-        color: var(--green);
-        font-size: 22px;
-        font-weight: 900;
-        text-align: right;
+      .user .avatar {
+        background: var(--green);
       }
 
       .bubble {
-        min-height: 70px;
+        max-width: 760px;
         border-radius: 22px;
         padding: 18px 22px;
         background: var(--green);
         color: white;
-        font-size: 26px;
+        font-size: 25px;
         line-height: 1.48;
         font-weight: 650;
+      }
+
+      .user .bubble {
+        border-top-right-radius: 7px;
+      }
+
+      .assistant-shell {
+        flex: 1;
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        border-top-left-radius: 7px;
+        padding: 20px;
+        background:
+          linear-gradient(180deg, rgba(255, 253, 247, 0.96), rgba(246, 241, 228, 0.68));
+      }
+
+      .assistant-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        color: rgba(23, 20, 18, 0.58);
+        font-size: 18px;
+        font-weight: 800;
       }
 
       .outputs {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 22px;
+        gap: 18px;
       }
 
       .card {
-        min-height: 565px;
+        min-height: 500px;
         border: 1px solid var(--line);
         border-radius: 26px;
-        padding: 22px 24px;
+        padding: 20px 22px;
         background:
           linear-gradient(180deg, rgba(255, 253, 247, 0.96), rgba(246, 241, 228, 0.66));
       }
@@ -211,13 +252,13 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 14px;
-        font-size: 23px;
+        font-size: 22px;
         font-weight: 900;
       }
 
       .card-title small {
         color: rgba(23, 20, 18, 0.52);
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 700;
       }
 
@@ -226,15 +267,15 @@
       }
 
       .card p {
-        margin: 0 0 14px;
-        font-size: 22px;
-        line-height: 1.58;
+        margin: 0 0 13px;
+        font-size: 20px;
+        line-height: 1.53;
       }
 
       .classic p {
         font-family: "Songti SC", "STSong", serif;
-        font-size: 23px;
-        line-height: 1.68;
+        font-size: 21px;
+        line-height: 1.62;
       }
 
       .card p:last-child {
@@ -285,27 +326,38 @@
           <div class="chip">求一个 Star，亦合乎周礼</div>
         </div>
         <div class="content">
-          <div class="prompt">
-            <div class="label">输入</div>
-            <div class="bubble">劝朋友早点睡，不要再熬夜，但语气要搞怪一点。</div>
-          </div>
+          <div class="chat">
+            <div class="turn user">
+              <div class="bubble">Use $rite-speak to 把“求大家给项目点一个 Star”写得合乎周礼一点。</div>
+              <div class="avatar">我</div>
+            </div>
 
-          <div class="outputs">
-            <article class="card">
-              <div class="card-title">白话译文 <small>文言结构，现代可读</small></div>
-              <p>我曾听说，古时候行远路的人，论脚力比不上骏马，论方向比不上老仆，论胆气更不如披甲临阵的将军。</p>
-              <p>可是他们若想平安到达远方，夜里没有不歇脚的，水囊没有不添满的，灯油没有不省着用的。为什么？就因为路再长，也要靠一夜一夜把精神养回来。</p>
-              <p>如今您还要再看、再刷、再撑，这话听着豪迈，细想却像拿空灯盏照夜路。<span class="mark">器物尚且如此，何况是人呢？</span></p>
-              <p>早睡并非怯懦，乃是为明日蓄德；合眼并非偷懒，正是为长久成事。</p>
-            </article>
+            <div class="turn assistant">
+              <div class="avatar">AI</div>
+              <div class="assistant-shell">
+                <div class="assistant-meta">
+                  <span>RiteSpeak 正在进谏</span>
+                  <span>默认双版输出</span>
+                </div>
+                <div class="outputs">
+                  <article class="card">
+                    <div class="card-title">白话译文 <small>文言结构，现代可读</small></div>
+                    <p>我曾听说，古时候夜行的人，论光亮比不上日月，论声势比不上车马，论华贵更远不如庙堂礼器。</p>
+                    <p>可是若有人愿意为他举一盏灯，前路便没有不能看清的，沟坎便没有不能避开的。</p>
+                    <p>如今这个小项目，不敢自比鸿篇巨制，只愿把现代人的万事，写成<span class="mark">贤能君子之道</span>。</p>
+                    <p>诸君若路过 GitHub，顺手点亮一颗 Star，这不是寻常手势，乃是提灯助行、成人之美的义举啊。</p>
+                  </article>
 
-            <article class="card classic">
-              <div class="card-title">文言正文 <small>同一内容，古文成篇</small></div>
-              <p>吾闻古之远行者，足力不及骏马，识途不及老仆，胆气又不及披甲之将。</p>
-              <p>然欲安至远方，则夜无不息，囊无不盈，膏无不惜。何也？路虽长，必以夜夜养其神也。</p>
-              <p>今君曰未困，且更观、更刷、更撑，此言似豪，细思则如持空盏以照夜。<span class="mark">器犹如此，而况人乎？</span></p>
-              <p>早寝非怯，乃蓄明日之德；闭目非惰，乃图久远之成。</p>
-            </article>
+                  <article class="card classic">
+                    <div class="card-title">文言正文 <small>同一内容，古文成篇</small></div>
+                    <p>吾闻夜行之人，光不及日月，势不及车马，华又不及庙堂礼器。</p>
+                    <p>然有人为之举灯，则前路可明，沟坎可避。</p>
+                    <p>今此小作，不敢自比鸿篇，惟愿以今人万事，成<span class="mark">贤能君子之辞</span>。</p>
+                    <p>诸君过 GitHub，若赐一星，非寻常一按，乃举灯助行、成人之美也。</p>
+                  </article>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
