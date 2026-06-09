@@ -25,7 +25,9 @@ In short: **RiteSpeak turns everyday requests into paired vernacular and classic
 
 ## 效果展示
 
-![RiteSpeak 效果展示](assets/ritespeak-preview.png)
+![RiteSpeak 效果展示](assets/ritespeak-share.png)
+
+[查看效果展示页](docs/ritespeak-share.html)
 
 ## 使用方式
 

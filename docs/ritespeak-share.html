@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RiteSpeak / 合乎周礼 效果展示</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --ink: #171412;
+        --paper: #fffdf7;
+        --paper-deep: #f6f1e4;
+        --green: #245c47;
+        --red: #a62922;
+        --gold: #b58a35;
+        --line: rgba(23, 20, 18, 0.13);
+      }
+
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        color: var(--ink);
+        background:
+          linear-gradient(90deg, rgba(23, 20, 18, 0.035) 1px, transparent 1px) 0 0 / 54px 54px,
+          linear-gradient(0deg, rgba(23, 20, 18, 0.026) 1px, transparent 1px) 0 0 / 54px 54px,
+          radial-gradient(circle at 16% 12%, rgba(166, 41, 34, 0.16), transparent 25%),
+          radial-gradient(circle at 88% 16%, rgba(36, 92, 71, 0.15), transparent 23%),
+          linear-gradient(140deg, #fffdf7 0%, #fbfff8 56%, #fff7f4 100%);
+        font-family: "PingFang SC", "Hiragino Sans GB", "Songti SC", serif;
+      }
+
+      .poster {
+        position: relative;
+        width: 1080px;
+        height: 1350px;
+        padding: 46px 62px 42px;
+      }
+
+      .topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        padding: 10px 16px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 253, 247, 0.82);
+        color: var(--green);
+        font-size: 23px;
+        font-weight: 700;
+      }
+
+      .badge::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--red);
+      }
+
+      .seal {
+        width: 96px;
+        height: 96px;
+        display: grid;
+        place-items: center;
+        border: 5px solid var(--red);
+        color: var(--red);
+        font-family: "Songti SC", "STSong", serif;
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 1.02;
+        text-align: center;
+        transform: rotate(5deg);
+        background: rgba(255, 253, 247, 0.74);
+      }
+
+      h1 {
+        margin: 18px 0 0;
+        width: 820px;
+        font-family: "Songti SC", "STSong", serif;
+        font-size: 74px;
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin: 12px 0 18px;
+        max-width: 870px;
+        color: rgba(23, 20, 18, 0.72);
+        font-size: 28px;
+        line-height: 1.38;
+      }
+
+      .starline {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        padding: 11px 16px 12px;
+        border-radius: 16px;
+        background: var(--ink);
+        color: var(--paper);
+        font-size: 21px;
+        font-weight: 700;
+      }
+
+      .starline span {
+        color: #ffd66b;
+      }
+
+      .demo {
+        margin-top: 24px;
+        height: 815px;
+        border: 1px solid var(--line);
+        border-radius: 34px;
+        background: rgba(255, 253, 247, 0.89);
+        box-shadow:
+          0 28px 80px rgba(23, 20, 18, 0.14),
+          inset 0 0 0 10px rgba(246, 241, 228, 0.82);
+        overflow: hidden;
+      }
+
+      .demo-head {
+        height: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 32px;
+        border-bottom: 1px solid var(--line);
+        background: rgba(246, 241, 228, 0.74);
+      }
+
+      .demo-title {
+        font-size: 25px;
+        font-weight: 800;
+      }
+
+      .chip {
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(166, 41, 34, 0.1);
+        color: var(--red);
+        font-size: 20px;
+        font-weight: 800;
+      }
+
+      .content {
+        padding: 28px 30px;
+      }
+
+      .prompt {
+        display: grid;
+        grid-template-columns: 108px 1fr;
+        gap: 18px;
+        align-items: start;
+        margin-bottom: 22px;
+      }
+
+      .label {
+        padding-top: 16px;
+        color: var(--green);
+        font-size: 22px;
+        font-weight: 900;
+        text-align: right;
+      }
+
+      .bubble {
+        min-height: 70px;
+        border-radius: 22px;
+        padding: 18px 22px;
+        background: var(--green);
+        color: white;
+        font-size: 26px;
+        line-height: 1.48;
+        font-weight: 650;
+      }
+
+      .outputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+
+      .card {
+        min-height: 565px;
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        padding: 22px 24px;
+        background:
+          linear-gradient(180deg, rgba(255, 253, 247, 0.96), rgba(246, 241, 228, 0.66));
+      }
+
+      .card.classic {
+        background:
+          linear-gradient(180deg, rgba(23, 20, 18, 0.97), rgba(45, 39, 33, 0.96));
+        color: var(--paper);
+      }
+
+      .card-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+        font-size: 23px;
+        font-weight: 900;
+      }
+
+      .card-title small {
+        color: rgba(23, 20, 18, 0.52);
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      .classic .card-title small {
+        color: rgba(255, 253, 247, 0.56);
+      }
+
+      .card p {
+        margin: 0 0 14px;
+        font-size: 22px;
+        line-height: 1.58;
+      }
+
+      .classic p {
+        font-family: "Songti SC", "STSong", serif;
+        font-size: 23px;
+        line-height: 1.68;
+      }
+
+      .card p:last-child {
+        margin-bottom: 0;
+      }
+
+      .mark {
+        color: var(--red);
+        font-weight: 900;
+      }
+
+      .classic .mark {
+        color: #ffd66b;
+      }
+
+      .foot {
+        position: absolute;
+        left: 62px;
+        right: 62px;
+        bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(23, 20, 18, 0.64);
+        font-size: 21px;
+        font-weight: 650;
+      }
+
+      .foot strong {
+        color: var(--red);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="poster">
+      <div class="topline">
+        <div class="badge">AI Prompt / Agent Skill</div>
+        <div class="seal">合乎<br />周礼</div>
+      </div>
+
+      <h1>RiteSpeak<br />合乎周礼</h1>
+      <p class="subtitle">把现代万事写成“贤能君子之道”：默认同时输出白话译文与文言正文，同一文意，两种表达。</p>
+      <div class="starline"><span>★</span> github.com/thomaszhong09-commits/rite-speak</div>
+
+      <section class="demo" aria-label="RiteSpeak output demo">
+        <div class="demo-head">
+          <div class="demo-title">效果展示</div>
+          <div class="chip">求一个 Star，亦合乎周礼</div>
+        </div>
+        <div class="content">
+          <div class="prompt">
+            <div class="label">输入</div>
+            <div class="bubble">劝朋友早点睡，不要再熬夜，但语气要搞怪一点。</div>
+          </div>
+
+          <div class="outputs">
+            <article class="card">
+              <div class="card-title">白话译文 <small>文言结构，现代可读</small></div>
+              <p>我曾听说，古时候行远路的人，论脚力比不上骏马，论方向比不上老仆，论胆气更不如披甲临阵的将军。</p>
+              <p>可是他们若想平安到达远方，夜里没有不歇脚的，水囊没有不添满的，灯油没有不省着用的。为什么？就因为路再长，也要靠一夜一夜把精神养回来。</p>
+              <p>如今您还要再看、再刷、再撑，这话听着豪迈，细想却像拿空灯盏照夜路。<span class="mark">器物尚且如此，何况是人呢？</span></p>
+              <p>早睡并非怯懦，乃是为明日蓄德；合眼并非偷懒，正是为长久成事。</p>
+            </article>
+
+            <article class="card classic">
+              <div class="card-title">文言正文 <small>同一内容，古文成篇</small></div>
+              <p>吾闻古之远行者，足力不及骏马，识途不及老仆，胆气又不及披甲之将。</p>
+              <p>然欲安至远方，则夜无不息，囊无不盈，膏无不惜。何也？路虽长，必以夜夜养其神也。</p>
+              <p>今君曰未困，且更观、更刷、更撑，此言似豪，细思则如持空盏以照夜。<span class="mark">器犹如此，而况人乎？</span></p>
+              <p>早寝非怯，乃蓄明日之德；闭目非惰，乃图久远之成。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="foot">
+        <span>白话作译，文言成篇。</span>
+        <strong>路过 GitHub，烦请赐一颗 Star。</strong>
+      </div>
+    </main>
+  </body>
+</html>
